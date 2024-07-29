@@ -1,0 +1,51 @@
+<html>
+     <head>
+          <title> FOOD App by Manasvi</title>
+          <style>
+                *{font-size:50px;font-family:Cambria;}
+                body{background-color:linen;}
+                
+                h1,h2{background-color:black; color:white; width:70%; border-radius:30px;}
+          </style>
+     </head>
+     <body>
+          <center>
+                 <h1>Engineering App</h1>
+                 <form onsubmit="show()">
+                       <input type="text"placeholder="enter your name"id="name"/>
+                       <br/><br/>
+                       <label for="eyear">Select Engg Year</label>
+                       <select id="eyear">
+                               <option value="fe">FE</option>
+                               <option value="se">SE</option>
+                               <option value="te">TE</option>
+                               <option value="be">BE</option>
+                       </select>
+
+                       <br/><br/>
+                       <input type="submit"/>
+                 </form>
+                       <h2 id="msg"/>
+                 <script>
+                        function show()
+                        {
+                          event.preventDefault();
+                          let name=document.getElementById("name");
+                          let eyear=document.getElementById("eyear");
+                          let msg=document.getElementById("msg");
+                          
+                          if(name.value==="")
+                          {
+                                alert("please enter name");
+                                msg.innerHTML="";
+                                name.focus();
+                                return;
+                           }
+                                                
+                          let a="name="+name.value+"Engineering="+eyear.value;
+                          msg.innerHTML=a;
+                          }
+                  </script>
+             </center>
+     </body>
+</html>
